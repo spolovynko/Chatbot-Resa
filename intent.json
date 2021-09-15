@@ -1,0 +1,172 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "hey",
+        "hello",
+        "hi",
+        "good morning",
+        "good evening",
+        "hey there",
+        "hey are you there",
+        "hey bot",
+        "hi bot are you there",
+        "hii",
+        "hellooo",
+        "hey how are you",
+        "hey i hope you are doing good",
+        "hi bot",
+        "hey dude",
+        "hello bot",
+        "hi wassup",
+        "hi whatsup",
+        "hey wassup",
+        "hey whatsup",
+        "i hope you are doing great",
+        "hey bot how are you",
+        "hello how are you"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, how can I assisst today",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", 
+        "See you later", 
+        "Goodbye",
+        "bye",
+        "goodbye",
+        "see you around",
+        "see you later",
+        "bbye",
+        "bye see you",
+        "bbye take care",
+        "bye tc",
+        "bye take care see you soon",
+        "bye see you soon",
+        "bbye nice talking to you",
+        "bye talk to you later",
+        "bbye talk to you later",
+        "bye meet you soon",
+        "bbye meet you soon",
+        "yes thank you"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "booking",
+      "patterns": ["Book a table","Can I book a table?", "I want to book a table", "Book seat", "I want to book a seat", "Can I book a seat?"],
+      "responses": ["For how many people would you like to book?"]
+    },
+    
+    {
+      "tag": "number of people",
+      "patterns": [
+        "please book table for 5 people",
+        "please book table for 10 people",
+        "yes please book table for 2 people",
+        "table for 3 please",
+        "i would like to book for ten people",
+        "please book for five guys",
+        "can i have a table for two",
+        "book the table for 2 please",
+        "4 persons",
+        "2",
+        "6 people",
+        "book for 8 persons please",
+        "please book for 30 people",
+        "i want booking for 20 people",
+        "it is 6 people",
+        "15 people are coming",
+        "there are 10 guests",
+        "number of guests are 5",
+        "group of 20 person is coming",
+        "there will be 10 people",
+        "book for 7 person",
+        "only 2 people",
+        "number of person will be 6",
+        "it's 9 people",
+        "it is 12 person"
+      ],
+      "responses": [
+        "Number of people confirmed",
+        "Number of attendees confirmed"
+      ]
+    },
+    {
+      "tag": "payments",
+      "patterns": [
+        "Do you take credit cards?",
+        "Do you accept Mastercard?",
+        "Can I pay with Paypal?",
+        "Are you cash only?"
+      ],
+      "responses": [
+        "We accept VISA, Mastercard and Paypal",
+        "We accept most major credit cards, and Paypal"
+      ]
+    },
+    {
+      "tag": "datetime",
+      "patterns": [
+        "book for tomorrow 8pm",
+        "sunday 9pm",
+        "i am looking for the booking for 20 jan for 6pm",
+        "book for 30 apr 11am",
+        "make booking for 10am today",
+        "book table for today for 7pm",
+        "tommorow 17 apr by 9 am",
+        "i will prefer this wednesday at 5pm",
+        "i would like to make it for tuesday 11am",
+        "my visit will be for tuesday around 8pm",
+        "date and time will be for monday 7pm",
+        "i will come on thursday at 5pm",
+        "confirm it for tomorrow at 4pm",
+        "it is for 22 april around 11 am",
+        "25 april 6pm",
+        "please book for today 7pm",
+        "confirm it for 2 april around 11am"
+      ],
+      "responses": [
+        "Delivery takes 2-4 days",
+        "Shipping takes 2-4 days"
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Tell me a joke!",
+        "Tell me something funny!",
+        "Do you know a joke?"
+      ],
+      "responses": [
+        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+        "What did the buffalo say when his son left for college? Bison."
+      ]
+    }
+  ]
+}

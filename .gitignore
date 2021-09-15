@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+Restaurant_Reviews.tsv
+test.txt
+train.txt
+val.txt
+tut1-model.pt
+twitter_training.csv
+twitter_validation.csv
+

@@ -14,3 +14,5 @@ def getResponse(ints, intents_json, msg, nlp, sentiment_analyser, tokenizer, max
             result = random.choice(i["responses"])
             break
     return result
+
+

@@ -18,6 +18,9 @@ def payments():
     payment.append('Are cash only.')
     return payment
 
+def greetings():
+    sentences = []
+
 
 def json_build():
     tags = ['booking', 'payments']

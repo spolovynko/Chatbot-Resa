@@ -18,10 +18,12 @@ intents = json.loads(open("static/intents-venkata.json").read())
 words = pickle.load(open("static/words.pkl", "rb"))
 classes = pickle.load(open("static/classes.pkl", "rb"))
 sentiment_analyser = load_model('static/sentiment_analyser/model')
-tokenizer = tokenizer_from_json('static/tokenizer.json')
+tokenizer = pickle.load(open("static/tokenizer.pickle", "rb"))
 max_len = 34
 nlp = spacy.load('en_core_web_lg')
 booking = {'time': '', 'people':'', 'day':''}
+history = []
+status = [booking, history, False, False] #booking info, chat history, angriness status, booking complete
 
 
 app = Flask(__name__)
@@ -36,7 +38,7 @@ def home():
 def chatbot_response():
     msg = request.form["msg"]
     ints = predict_class(msg, model, words, classes, lemmatizer)
-    res = getResponse(ints, intents, msg, nlp, sentiment_analyser, tokenizer, max_len, booking)
+    res = getResponse(ints, intents, msg, nlp, sentiment_analyser, tokenizer, max_len, status)
     return res
 
 if __name__ == "__main__":

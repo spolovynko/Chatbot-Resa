@@ -13,6 +13,7 @@ def tokenize(sentence, nlp):
 
 def is_angry(sentence, nlp, model, tokenizer, max_len):
     sent = [token for token in tokenize(sentence, nlp)]
+    print(sent)
     sent = [token[0]for token in tokenizer.texts_to_sequences(sent) if len(token)>0]
     sent = pad_sequences([sent], maxlen=max_len)
     return np.argmax(model(sent))==1
@@ -34,7 +35,22 @@ def typos_correction(sentence, dictionnary):
 
 
 if __name__ == '__main__':
-    dictionnary = ['hello', 'hi', '9pm', 'like', 'feel']
-    print(typos_correction('<script>Helo World  ! Feeling ok today, and tomorow? (feeling nice or bad; this is the question)</script>#I try to pown you 8pm', dictionnary))
+    import spacy
+    import pickle
+    from tensorflow.keras.models import load_model
+    import tensorflow as tf
+
+
+    device = tf.config.list_physical_devices('GPU')[0]
+    tf.config.experimental.set_memory_growth(device, True)
+
+
+    sent = 'Yes Gladly I am happy with that'
+    sentiment_analyser = load_model('../static/sentiment_analyser/model')
+    tokenizer = pickle.load(open("../static/tokenizer.pickle", "rb"))
+    max_len = 34
+    nlp = spacy.load('en_core_web_lg')
+    print(is_angry(sent, nlp, sentiment_analyser, tokenizer, max_len))
+    
 
 

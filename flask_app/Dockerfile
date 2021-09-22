@@ -7,4 +7,5 @@ RUN apt-get clean && \
 COPY . /ChatBot
 WORKDIR /ChatBot
 RUN pip install -r requirements.txt
+RUN python -m spacy download en_core_web_sm
 

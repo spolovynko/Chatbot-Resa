@@ -21,11 +21,9 @@ classes = pickle.load(open("static/classes.pkl", "rb"))
 sentiment_analyser = load_model('static/sentiment_analyser/model')
 tokenizer = pickle.load(open("static/tokenizer.pickle", "rb"))
 max_len = 34
-nlp = spacy.load('en_core_web_lg')
+nlp = spacy.load('en_core_web_sm')
 booking = {'time': '', 'people':'', 'day':''}
-history = []
-status = [booking, history, False, False] #booking info, chat history, angriness status, booking complete
-
+status = {'booking': booking, 'info_required': None, 'booking_started': False, 'angry': False, 'booking_compelete': False}
 
 app = Flask(__name__)
 # run_with_ngrok(app)
@@ -43,5 +41,5 @@ def chatbot_response():
     return res
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', port=8000)
 

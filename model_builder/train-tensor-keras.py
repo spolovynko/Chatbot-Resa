@@ -19,7 +19,7 @@ words = []
 classes = []
 documents = []
 ignore_words = ["?", "!"]
-data_file = open("intents-venkata.json").read()
+data_file = open("../flask_app/static/intents-venkata.json").read()
 intents = json.loads(data_file)
 
 # words
@@ -49,8 +49,8 @@ print(len(classes), "classes", classes)
 print(len(words), "unique lemmatized words", words)
 
 
-pickle.dump(words, open("words.pkl", "wb"))
-pickle.dump(classes, open("classes.pkl", "wb"))
+pickle.dump(words, open("../flask_app/static/words.pkl", "wb"))
+pickle.dump(classes, open("../flask_app/static/classes.pkl", "wb"))
 
 # training initializer
 # initializing training data
@@ -105,6 +105,6 @@ model.compile(loss="categorical_crossentropy", optimizer=sgd, metrics=["accuracy
 
 # fitting and saving the model
 hist = model.fit(np.array(train_x), np.array(train_y), epochs=1000, batch_size=5, verbose=1)
-model.save("chatbot_model_turing.h5", hist)
+model.save("../flask_app/static/chatbot_model_turing.h5", hist)
 print("model trained,created and saved")
 

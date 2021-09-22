@@ -12,6 +12,7 @@ from python_scripts.bot_answer import getResponse
 
 lemmatizer = WordNetLemmatizer()
 
+
 # chat initialization
 model = load_model("static/chatbot_model_turing.h5")
 intents = json.loads(open("static/intents-venkata.json").read())
@@ -27,7 +28,7 @@ status = [booking, history, False, False] #booking info, chat history, angriness
 
 
 app = Flask(__name__)
-run_with_ngrok(app) 
+# run_with_ngrok(app)
 
 @app.route("/")
 def home():

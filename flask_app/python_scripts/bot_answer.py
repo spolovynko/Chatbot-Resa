@@ -1,5 +1,5 @@
 import random
-from python_scripts.user_input_analysis import is_angry
+from flask_app.python_scripts.user_input_analysis import is_angry
 
 def getResponse(ints, intents_json, msg, nlp, sentiment_analyser, tokenizer, max_len, status):
     tag = ints[0]["intent"]

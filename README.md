@@ -51,7 +51,7 @@ A bot for a large chain of restaurants/hotels. When the customer sends a message
   > My room is dirty! This is outrageous!
   > I want to talk to a human.
   ```
-# Process:
+# Process
 
 As part of the project we have decdided to build two models one is for Text Analysis and the second is for the Sentiment Analysis to know about the feeling of the customer as part of converation through the Bot.
 
@@ -69,8 +69,6 @@ As part of the project we have decdided to build two models one is for Text Anal
  -Flask
  -Jupyter Notebook
  -Pycharm
-  
-
 
 
 

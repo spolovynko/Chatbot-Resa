@@ -71,9 +71,9 @@ As part of the project we have decdided to build two models one is for Text Anal
  - Pycharm
 
 # Team
-Nathanael
-Sergei
-Venkata
+- Nathanael
+- Sergei
+- Venkata
 
 
 

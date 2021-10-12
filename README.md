@@ -63,12 +63,19 @@ As part of the project we have decdided to build two models one is for Text Anal
  - Model for Sentiment Analysis has been developed but not yet fully Integrated with Flask app.
 
 # Technologies used
- -Python 3.9
- -Tensorflow
- -nltk,spacy 
- -Flask
- -Jupyter Notebook
- -Pycharm
+ - Python 3.9
+ - Tensorflow
+ - nltk,spacy 
+ - Flask
+ - Jupyter Notebook
+ - Pycharm
+
+# Team
+Nathanael
+Sergei
+Venkata
+
+
 
 
 
